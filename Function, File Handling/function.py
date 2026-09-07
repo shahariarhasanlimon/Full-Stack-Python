@@ -30,7 +30,15 @@ def add_numbers(a, b): # arguments pass kore function define kora hocche
 add_numbers(10, 20) # parameter pass kore function call kora hocche
 add_numbers(5, 15) # Function call with different arguments
 
+# 3> Input, Return
 def multiply_numbers(a, b):
     return a * b  # Output: Product of a and b
 result = multiply_numbers(5, 10) # Function call with different arguments
 print(result) # Output: 50
+
+# 4> No Input, Return
+def get_greeting():
+    return "Hello, World!"  # Output: Greeting message
+
+greeting = get_greeting()
+print(greeting)  # Output: Hello, World!
