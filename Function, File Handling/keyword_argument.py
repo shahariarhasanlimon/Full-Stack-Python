@@ -10,3 +10,13 @@ def greet_with_default(name, age=18):
     
 greet_with_default("Charlie")  # Output: Hello, Charlie! You are 18 years old.
 greet_with_default("David", 25)  # Output: Hello, David! You are 25 years old.
+
+
+# Arbitary Keyword Arguments
+def greet_arbitrary(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+        
+greet_arbitrary(name="Eve", age=28, city="New York")  # Output: name: Eve
+# Output: age: 28
+# Output: city: New York
