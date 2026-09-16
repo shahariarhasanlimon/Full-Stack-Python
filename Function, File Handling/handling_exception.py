@@ -26,3 +26,35 @@ try:
 except FileNotFoundError as e:
     print('File not found.')
     print(e)
+
+
+def check_even_odd(num):
+    if num % 2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
+
+    def check_file(file_path):
+        try:
+            with open(file_path, 'r') as file:
+                print(file.read())
+        except FileNotFoundError as e:
+            print('File not found.')
+            print(e)
+
+            # manually raise an exception
+            def divide_numbers(a, b):
+                if b == 0:
+                    raise ValueError('Cannot divide by zero.')
+                return a / b
+
+            #custom error class
+            class CustomError(Exception):
+                pass
+
+            #custom error handling
+            try:
+                check_file('non_existent_file.txt')
+            except CustomError as e:
+                print('Custom error occurred.')
+                print(e)
