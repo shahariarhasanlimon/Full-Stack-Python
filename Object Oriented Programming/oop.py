@@ -14,7 +14,7 @@ class Car:
         self.brand = brand
         self.model = model
 
-    def display_info(self):
+    def display_info(self): # INSTANCE METHOD
         print(f"Brand: {self.brand}, Model: {self.model}")
 
 car1 = Car("Toyota", "Corolla")
