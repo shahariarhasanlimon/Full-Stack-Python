@@ -1,7 +1,7 @@
 # =============================
 # 1. Single Inheritance
 # =============================
-class GrandFarther:
+class GrandFather:
     # Parent class / Base class
     def __init__(self, color, first_name):
         self.color = color
@@ -11,8 +11,8 @@ class GrandFarther:
         print(f"GrandFather's color: {self.color}, First Name: {self.first_name}")
 
 
-class Father(GrandFarther):
-    # Single inheritance: Father inherits from GrandFarther
+class Father(GrandFather):
+    # Single inheritance: Father inherits from GrandFather
     def __init__(self, hobby, color, first_name):
         super().__init__(color, first_name)  # Call parent constructor
         self.hobby = hobby
@@ -26,9 +26,9 @@ class Father(GrandFarther):
 # 2. Multilevel Inheritance
 # =============================
 class Children(Father):
-    # Multilevel inheritance: Children -> Father -> GrandFarther
+    # Multilevel inheritance: Children -> Father -> GrandFather
     def __init__(self, school, hobby, color, first_name):
-        super().__init__(hobby, color, first_name)  # Father.__init__ calls GrandFarther.__init__
+        super().__init__(hobby, color, first_name)  # Father.__init__ calls GrandFather.__init__
         self.school = school
 
     def child_method(self):
@@ -38,8 +38,8 @@ class Children(Father):
 # =============================
 # 3. Hierarchical Inheritance
 # =============================
-class Mother(GrandFarther):
-    # Hierarchical inheritance: both Father and Mother inherit from GrandFarther
+class Mother(GrandFather):
+    # Hierarchical inheritance: both Father and Mother inherit from GrandFather
     def __init__(self, profession, color, first_name):
         super().__init__(color, first_name)
         self.profession = profession
@@ -106,7 +106,7 @@ class Puppy(Dog):
 # =============================
 # Run examples
 # =============================
-gf1 = GrandFarther("Red", "Chowdhury")
+gf1 = GrandFather("Red", "Chowdhury")
 f1 = Father("Cricket", "Blue", "Rahim")
 c1 = Children("Dhaka College", "Cricket", "Blue", "Rahim")
 m1 = Mother("Teacher", "Black", "Amina")
@@ -121,8 +121,8 @@ f1.gf_method()
 print("\n3. Multilevel Inheritance:")
 c1.gf_method()         # from Father
 c1.child_method()      # from Children
-print(c1.color)        # inherited from GrandFarther
-print(c1.first_name)   # inherited from GrandFarther
+print(c1.color)        # inherited from GrandFather
+print(c1.first_name)   # inherited from GrandFather
 print(c1.school)       # own attribute of Children
 print(c1.hobby)        # inherited from Father
 
